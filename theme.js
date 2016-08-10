@@ -17,15 +17,15 @@ window.addEventListener('load', function() {
 	nav.appendChild(navList);
 	var navLinkIndex = 0;
 	for ( var i in section.childNodes ) {
-		if (	section.childNodes[i].tagName == 'H1'
-			||	section.childNodes[i].tagName == 'H2'
+		if (	section.childNodes[i].tagName == 'H2'
+			||	section.childNodes[i].tagName == 'H3'
 			) {
 		
 			navLinkIndex++;
-			var navListItemClass = 'h1';
+			var navListItemClass = 'h2';
 			switch (section.childNodes[i].tagName) {
-				case 'H1': navListItemClass = 'h1'; break;
 				case 'H2': navListItemClass = 'h2'; break;
+				case 'H3': navListItemClass = 'h3'; break;
 			}
 		
 			var navListItem = document.createElement('li');
@@ -46,6 +46,17 @@ window.addEventListener('load', function() {
 					, section.childNodes[i].childNodes[0]
 					);
 			}
+		}
+	}
+});
+
+// set document title to h1
+window.addEventListener('load', function() {
+	var section = document.getElementsByTagName('section').item(0);
+	for ( var i in section.childNodes ) {
+		if (section.childNodes[i].tagName == 'H1') {
+			document.title = section.childNodes[i].textContent;
+			break;
 		}
 	}
 });
