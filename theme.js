@@ -60,3 +60,17 @@ window.addEventListener('load', function() {
 		}
 	}
 });
+
+// add banner "fork me on github"
+window.addEventListener('load', function() {
+	var div = document.createElement('section');
+	var p = document.createElement('p');
+	p.setAttribute('class', 'banner');
+	div.setAttribute('class', 'bannerContainer');
+	p.innerHTML = 'Fork Me on GitHub';
+	div.appendChild(p);
+	document.body.appendChild(div);
+	console.log('Hi');
+});
+
+

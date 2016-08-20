@@ -1,8 +1,8 @@
-body {
+body section:first-child {
   font-family: arial;
   font-size: 11pt;
 }
-body {
+body section:first-child {
   width: 80%;
   margin: 50 auto 150 auto;
 }
@@ -31,4 +31,21 @@ section nav ol a {
 }
 section nav ol a:hover {
   color: #F00;
+}
+
+/** banner: "fork me on github" **/
+p.banner {
+  padding: 10px;
+  background-color: #000;
+  color: #FFF;
+  text-align: right;
+}
+section.bannerContainer {
+  font-weight: 700;
+  line-height: 10px;
+  display: block;
+  float: right;
+}
+section.bannerContainer:hover {
+  cursor: pointer;
 }
